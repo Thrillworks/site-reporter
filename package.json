@@ -4,8 +4,13 @@
   "description": "CLI tool to report pferformance metrics for whole websites",
   "homepage": "https://github.com/Thrillworks/site-reporter#readme",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/Thrillworks/site-reporter.git"
+    "type": "git",
+    "url": "https://github.com/Thrillworks/site-reporter.git"
+  },
+  "eslintConfig": {
+    "extends": [
+      "thrillworks"
+    ]
   },
   "main": "site-reporter.js",
   "bin": {
@@ -17,6 +22,7 @@
     "crawler": "^1.2.1",
     "domain-match": "^1.0.0",
     "lighthouse-batch": "^4.0.0",
+    "requireg": "^0.2.2",
     "yargs": "^13.2.4"
   },
   "devDependencies": {
