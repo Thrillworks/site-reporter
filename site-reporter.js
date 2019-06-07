@@ -9,22 +9,22 @@ const { spawn } = require("child_process");
 var urlList = [];
 
 const argv = yargs
-  .command("report [url]", "the site to run reports against", yargs => {
-    yargs.positional("url", {
-      description:
-        "url of site to run report against, example: https://www.amazon.com",
-      type: "string"
-    });
-  })
-  .option("verbose", {
-    description: "verbose output to the process",
-    alias: "v",
-    default: false,
-    type: "boolean"
-  })
-  .help()
-  .alias("help", "h").argv;
-
+    .command('report [url]', 'the site to run reports against', (yargs) => {
+        yargs.positional('url', {
+            description: 'url of site to run report against, example: https://www.thrillworks.com',
+            type: 'string',
+        });
+    })
+    .option('verbose',{
+        description: 'verbose output to the process',
+        alias: 'v',
+        default: false,
+        type: 'boolean',
+    })
+    .help()
+    .alias('help','h')
+    .argv;
+ 
 const primaryURLScrape = new Crawler({
   maxConnections: 10,
   // This will be called for each crawled page
