@@ -4,7 +4,6 @@ const Crawler = require("crawler");
 const domainMatch = require("domain-match");
 const yargs = require("yargs");
 const { spawn } = require("child_process");
-const requireg = require("requireg");
 
 //globals
 var urlList = [];
