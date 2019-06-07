@@ -11,7 +11,7 @@ var urlList = [];
 const argv = yargs
     .command('report [url]', 'the site to run reports against', (yargs) => {
         yargs.positional('url', {
-            description: 'url of site to run report against, example: https://www.amazon.com',
+            description: 'url of site to run report against, example: https://www.thrillworks.com',
             type: 'string',
         });
     })
