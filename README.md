@@ -1,8 +1,21 @@
 # site-reporter
+
 CLI for creating whole websites reports with lighthouse and other tools
 
+## Installation
+
+run:
+
+`$ npm install -g lighthouse-batch`
+
+`$ npm install -g site-reporter`
+
+## Usage
+
+`$ site-reporter report https://www.thrillworks.com --verbose`
 
 ## Licence
+
 MIT License
 
 Copyright (c) 2019 Thrillworks Inc.
@@ -24,4 +37,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
