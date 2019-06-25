@@ -16,12 +16,20 @@
   "bin": {
     "site-reporter": "./site-reporter.js"
   },
+  "scripts": {
+    "start": "node site-reporter.js report",
+    "accessibility": "node site-reporter.js accessibility"
+  },
   "author": "Thrillworks Inc.",
   "license": "MIT",
   "dependencies": {
     "crawler": "^1.2.1",
+    "cross-spawn": "^6.0.5",
     "domain-match": "^1.0.0",
+    "fs-extra": "^8.0.1",
     "lighthouse-batch": "^4.0.0",
+    "tw-accessibility-auditor": "^1.1.0",
+    "tw-async-reduce": "^1.1.0",
     "yargs": "^13.2.4"
   },
   "devDependencies": {

@@ -1,4 +1,6 @@
 report
+report-ui/build
+report-ui/src/report
    
 package-lock.json
 # Logs
