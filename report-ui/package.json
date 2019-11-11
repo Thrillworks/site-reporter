@@ -2,7 +2,6 @@
   "name": "lighthouse-report",
   "version": "0.1.0",
   "private": true,
-  "homepage": "/Users/rsanan/Lighthouse CLI/site-reporter/report-ui/src/",
   "dependencies": {
     "grommet": "^2.7.1",
     "react": "^16.8.6",

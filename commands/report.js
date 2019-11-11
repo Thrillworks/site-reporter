@@ -137,7 +137,7 @@ const runReport = (urlList, argv = {}) => {
         console.log(`Oops. The program exited with an unknown exit code: ${code}. Report this on GitHub!`);
     }
     // const moveDir = spawn(cd, ["report-ui"]);
-    cp.exec('npm run-script build', {cwd: '/Users/rsanan/Lighthouse CLI/site-reporter/report-ui/'}, (error, stdout, stderr) => {
+    cp.exec('npm run-script build', {cwd: './report-ui/'}, (error, stdout, stderr) => {
       // if(error === null){
       //   cp.exec('')    
       // }
