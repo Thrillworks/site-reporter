@@ -5,6 +5,8 @@ const cp = require ("child_process");
 const accessibilityCommand = require('./accessibility');
 const config = require('../config');
 
+console.log(process.env)
+
 const urlList = [];
 const crawler = new Crawler({ maxConnections: 10 });
 
