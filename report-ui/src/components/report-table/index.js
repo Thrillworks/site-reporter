@@ -36,10 +36,10 @@ const columns = [
     property: 'html',
     header: 'Site Report',
     render: datum => {
-      const link = process.env.PUBLIC_URL + '/report/lighthouse/' + datum.html;
+      const temp_link = process.env.PUBLIC_URL + '/report/lighthouse/' + datum.html;
       return (
         <Box pad={{ vertical: 'xsmall' }}>
-          <a href={link}>Report</a>
+          <a href={temp_link}>Report</a>
         </Box>
       )
     },
