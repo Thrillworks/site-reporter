@@ -4,15 +4,9 @@ CLI for creating whole websites reports with lighthouse and other tools
 
 ## Installation
 
-run:
-
-`$ npm install -g lighthouse-batch`
-
-`$ npm install -g site-reporter`
-
 ## Usage
 
-`$ site-reporter report https://www.thrillworks.com --verbose`
+Run generate_report.command
 
 ## Licence
 

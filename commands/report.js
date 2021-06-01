@@ -1,8 +1,11 @@
 const Crawler = require("crawler");
 const domainMatch = require("domain-match");
 const spawn = require("cross-spawn");
+const cp = require ("child_process");
 const accessibilityCommand = require('./accessibility');
 const config = require('../config');
+
+console.log(process.env)
 
 const urlList = [];
 const crawler = new Crawler({ maxConnections: 10 });
@@ -135,6 +138,12 @@ const runReport = (urlList, argv = {}) => {
         //something unexpected
         console.log(`Oops. The program exited with an unknown exit code: ${code}. Report this on GitHub!`);
     }
+    // const moveDir = spawn(cd, ["report-ui"]);
+    cp.exec('npm run-script build', {cwd: './report-ui/'}, (error, stdout, stderr) => {
+      // if(error === null){
+      //   cp.exec('')    
+      // }
+    });
     console.log(`child process exited with code ${code}`);
   });
 };

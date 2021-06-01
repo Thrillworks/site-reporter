@@ -27,10 +27,9 @@
     "cross-spawn": "^6.0.5",
     "domain-match": "^1.0.0",
     "fs-extra": "^8.0.1",
-    "lighthouse-batch": "^4.0.0",
     "tw-accessibility-auditor": "^1.1.0",
     "tw-async-reduce": "^1.1.0",
-    "yargs": "^13.2.4"
+    "yargs": "^13.3.0"
   },
   "devDependencies": {
     "eslint": "^5.16.0"
