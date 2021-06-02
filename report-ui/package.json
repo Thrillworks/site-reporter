@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "",
   "dependencies": {
+    "@babel/helper-regex": "^7.10.5",
     "grommet": "^2.7.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -18,7 +19,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "copy-report": "ncp src/report build/report",
-    "postbuild" : "react-snap"
+    "postbuild": "react-snap"
   },
   "eslintConfig": {
     "extends": "react-app"
