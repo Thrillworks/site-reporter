@@ -128,7 +128,8 @@ const runReport = (urlList, argv = {}) => {
         //everything worked
         console.log(`Report creation successful!! Code: ${code}`);
         // Run accessibility audit if specified
-        if (argv.accessibility) await accessibilityCommand.handler(argv);
+        // if (argv.accessibility) await accessibilityCommand.handler(argv);
+        await accessibilityCommand.handler(argv);
         break;
       case 1:
         //something went wrong
