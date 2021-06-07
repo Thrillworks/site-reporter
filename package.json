@@ -1,7 +1,7 @@
 {
   "name": "site-reporter",
-  "version": "0.0.1",
-  "description": "CLI tool to report pferformance metrics for whole websites",
+  "version": "0.0.2",
+  "description": "CLI tool to report performance metrics for whole websites",
   "homepage": "https://github.com/Thrillworks/site-reporter#readme",
   "repository": {
     "type": "git",

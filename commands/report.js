@@ -1,8 +1,7 @@
 const Crawler = require("crawler");
 const domainMatch = require("domain-match");
 const spawn = require("cross-spawn");
-const cp = require ("child_process");
-const accessibilityCommand = require('./accessibility');
+// const cp = require ("child_process");
 const config = require('../config');
 
 console.log(process.env)
@@ -128,8 +127,7 @@ const runReport = (urlList, argv = {}) => {
         //everything worked
         console.log(`Report creation successful!! Code: ${code}`);
         // Run accessibility audit if specified
-        // if (argv.accessibility) await accessibilityCommand.handler(argv);
-        await accessibilityCommand.handler(argv);
+        if (argv.accessibility) await accessibilityCommand.handler(argv);
         break;
       case 1:
         //something went wrong
@@ -140,11 +138,11 @@ const runReport = (urlList, argv = {}) => {
         console.log(`Oops. The program exited with an unknown exit code: ${code}. Report this on GitHub!`);
     }
     // const moveDir = spawn(cd, ["report-ui"]);
-    cp.exec('npm run-script build', {cwd: './report-ui/'}, (error, stdout, stderr) => {
+    // cp.exec('npm run-script build', {cwd: './report-ui/'}, (error, stdout, stderr) => {
       // if(error === null){
       //   cp.exec('')    
       // }
-    });
+    // });
     console.log(`child process exited with code ${code}`);
   });
 };

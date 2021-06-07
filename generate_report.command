@@ -15,5 +15,8 @@ do
     read url_answer
 done
 echo "Now executing site-reporter script $url"
-site-reporter report $url
-open ./report-ui/build/index.html
+site-reporter report $url -a
+cp -r ./report ./report-ui/src/report
+cd ./report-ui/ 
+yarn build
+serve -s build
