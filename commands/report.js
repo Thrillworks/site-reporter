@@ -1,8 +1,10 @@
 const Crawler = require("crawler");
 const domainMatch = require("domain-match");
+const fse = require("fs-extra");
 const spawn = require("cross-spawn");
 // const cp = require ("child_process");
-const config = require('../config');
+const config = require("../config");
+const accessibilityCommand = require("./accessibility");
 
 console.log(process.env)
 
@@ -139,10 +141,13 @@ const runReport = (urlList, argv = {}) => {
     }
     // const moveDir = spawn(cd, ["report-ui"]);
     // cp.exec('npm run-script build', {cwd: './report-ui/'}, (error, stdout, stderr) => {
-      // if(error === null){
-      //   cp.exec('')    
-      // }
+    //   if(error === null){
+    //     cp.exec('')    
+    //   }
     // });
+    fse.copySync(`./report-ui/src/report`, `./report-ui/public/report`, { overwrite: true }, function(err) {
+      if (err) console.error(err);
+    });
     console.log(`child process exited with code ${code}`);
   });
 };

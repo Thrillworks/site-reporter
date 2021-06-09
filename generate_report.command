@@ -15,8 +15,7 @@ do
     read url_answer
 done
 echo "Now executing site-reporter script $url"
-site-reporter report $url -a
-cp -r ./report ./report-ui/src/report
+node site-reporter.js report $url -a
 cd ./report-ui/ 
-yarn build
-serve -s build
+npx react-scripts build
+npx react-scripts start
