@@ -1,9 +1,10 @@
 const Crawler = require("crawler");
 const domainMatch = require("domain-match");
+const fse = require("fs-extra");
 const spawn = require("cross-spawn");
-const cp = require ("child_process");
-const accessibilityCommand = require('./accessibility');
-const config = require('../config');
+// const cp = require ("child_process");
+const config = require("../config");
+const accessibilityCommand = require("./accessibility");
 
 console.log(process.env)
 
@@ -139,10 +140,13 @@ const runReport = (urlList, argv = {}) => {
         console.log(`Oops. The program exited with an unknown exit code: ${code}. Report this on GitHub!`);
     }
     // const moveDir = spawn(cd, ["report-ui"]);
-    cp.exec('npm run-script build', {cwd: './report-ui/'}, (error, stdout, stderr) => {
-      // if(error === null){
-      //   cp.exec('')    
-      // }
+    // cp.exec('npm run-script build', {cwd: './report-ui/'}, (error, stdout, stderr) => {
+    //   if(error === null){
+    //     cp.exec('')    
+    //   }
+    // });
+    fse.copySync(`./report-ui/src/report`, `./report-ui/public/report`, { overwrite: true }, function(err) {
+      if (err) console.error(err);
     });
     console.log(`child process exited with code ${code}`);
   });

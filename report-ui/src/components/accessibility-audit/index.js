@@ -14,7 +14,7 @@ function Screenshot({ image, html }) {
 
 function Screenshots({ nodes }) {
   return !nodes.length ? (<Paragraph>No screenshots available.</Paragraph>) : (
-    <Box align="start" direction="row" wrap="true" align="stretch">
+    <Box direction="row" wrap="true" align="start">
       {nodes.map(node => (
         node.screenshots && node.screenshots.map(image => (<Screenshot image={image} html={node.html} />))
       ))}
